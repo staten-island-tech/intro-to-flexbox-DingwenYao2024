@@ -1,0 +1,15 @@
+.card{
+    width: 30%;
+    height: 500px;
+    background-color: darkslategrey;
+    margin: 20px auto;
+}
+
+.container{
+    width: 90vw;
+    background-color: rgb(0, 0, 0);
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
