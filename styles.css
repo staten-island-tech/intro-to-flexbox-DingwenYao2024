@@ -1,15 +1,41 @@
-.card{
-    width: 30%;
-    height: 500px;
-    background-color: darkslategrey;
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    padding-top: 40;
+}
+
+.card {
+    width: 22%;
+    height: 525px;
+    background-color: rgb(16, 76, 116);
     margin: 20px auto;
 }
 
-.container{
+.container {
     width: 90vw;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(1, 0, 39);
     margin: 25px auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+body,
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(1, 0, 39);
+    font-family: "Imperial Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.img{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    object-fit: cover;
 }
