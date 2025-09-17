@@ -1,41 +1,58 @@
 h1 {
-    text-align: center;
-    color: white;
-    font-size: 80px;
-    padding-top: 40;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 100px;
+  padding-top: 40;
+  padding-bottom: 1;
+}
+
+h2{
+  font-size: 30px;
+  text-align: center;
 }
 
 .card {
-    width: 22%;
-    height: 525px;
-    background-color: rgb(16, 76, 116);
-    margin: 20px auto;
+  width: 22%;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 10px solid black;
 }
 
 .container {
-    width: 90vw;
-    background-color: rgb(1, 0, 39);
-    margin: 25px auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  width: 90vw;
+  background-color: rgb(113, 164, 197);
+  margin: 25px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 body,
 html {
-    font-size: 10px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(1, 0, 39);
-    font-family: "Imperial Script", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-size: 10px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(113, 164, 197);
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.img{
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    object-fit: cover;
+.img {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  padding-bottom: 10px;
+}
+
+button {
+  background-color: rgb(178, 231, 255);
+  border-radius: 20px;
 }
