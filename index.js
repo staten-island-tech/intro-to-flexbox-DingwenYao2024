@@ -1,3 +1,4 @@
+  const products = [
   {
     name: "Chips",
     price: 4.50,
@@ -88,10 +89,78 @@
     inStock: true,
     id: "drink",
     img: "https://media1.popsugar-assets.com/files/thumbor/oUUQDbG6yDYSgG-5BQS6QRGj0RE/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2015/10/28/798/n/1922398/fb0bffcf28178694_spin_prod_ec_1567913002.jpeg"
+  },
+  {
+    name: "Granola Bar",
+    price: 3.00,
+    inStock: true,
+    id: "food",
+    img: "https://images.unsplash.com/photo-1505253210343-c4e2e1c6f498?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Energy Drink",
+    price: 4.25,
+    inStock: true,
+    id: "drink",
+    img: "https://images.unsplash.com/photo-1570197780961-8e9d76fbd7bb?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Sunscreen",
+    price: 12.99,
+    inStock: true,
+    id: "other",
+    img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Chocolate Bar",
+    price: 2.75,
+    inStock: true,
+    id: "food",
+    img: "https://images.unsplash.com/photo-1542838687-94d01e208e98?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Tea",
+    price: 3.50,
+    inStock: true,
+    id: "drink",
+    img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Flashlight",
+    price: 15.00,
+    inStock: true,
+    id: "other",
+    img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Yogurt",
+    price: 1.99,
+    inStock: true,
+    id: "food",
+    img: "https://images.unsplash.com/photo-1589927986089-35812389fccb?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Sparkling Water",
+    price: 2.00,
+    inStock: true,
+    id: "drink",
+    img: "https://images.unsplash.com/photo-1582182677051-cae8eb64b6b0?auto=format&fit=crop&w=800&q=80"
   }
 ];
-
+/* 
 products.forEach((products) => makeCard(products));
 function makeCard(item) {
     
+} */
+function inject(products){
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML('afterbegin',
+    `<div class="display-card">
+      <img class="display-img" src="${products.img}" alt=""/>
+      <h2 class="display-name">${products.name}</h2>
+      <h2 class="display-price">${products.price}</h2>
+      <button class="remove btn">Remove Product</button>
+    </div>`);
 }
+
+products.forEach((product) => inject(product))
