@@ -95,7 +95,7 @@
     price: "$3.00",
     inStock: true,
     id: "food",
-    img: "https://images-na.ssl-images-amazon.com/images/I/81e5nXCn17L._AC_SL1500_.jpg"
+    img: "https://m.media-amazon.com/images/I/81qN8VrAo+L._SX679_.jpg"
   },
   {
     name: "Energy Drink",
@@ -123,7 +123,7 @@
     price: "$3.50",
     inStock: true,
     id: "drink",
-    img: "https://img.freepik.com/premium-photo/tea-cup_87394-6950.jpg"
+    img: "https://cdn0.woolworths.media/content/wowproductimages/large/791702.jpg"
   },
   {
     name: "Flashlight",
@@ -137,7 +137,7 @@
     price: "$1.99",
     inStock: true,
     id: "food",
-    img: "https://3.bp.blogspot.com/-7o0n5-Tkzns/VfHFEc8-vRI/AAAAAAAAAA0/Mj-egtGX924/s1600/yogurt.jpg"
+    img: "https://i5.walmartimages.com/asr/3b067099-4104-4e4a-88e9-89d17e3dcc90_1.792da3187113c0c4aa7dd0aa3345a8af.jpeg"
   },
 ];
 /* 
@@ -152,7 +152,7 @@ function inject(products){
       <img class="img" src="${products.img}" alt=""/>
       <h2 class="name">${products.name}</h2>
       <h2 class="price">${products.price}</h2>
-      <button class="remove btn">Remove Product</button>
+      <button class="buy btn">Buy Product</button>
     </div>`);
 }
 
