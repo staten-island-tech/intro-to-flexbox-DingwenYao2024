@@ -161,8 +161,11 @@ products.forEach((product) => inject(product))
 function addToCart(){
   const buttons = document.querySelector("button");
   const btnArray = Array.from(buttons);
-  console.log(buttons);
   btnArray.forEach((btn) => btn.addEventListener("click", function(event){
-    console.log(event.target.closest(".card"))
-  }))
+    console.log(event.target.textContent);
+    console.log(event.target.closest(".card").getAttribute(".cardname"));
+  })
+);
 }
+
+addToCart();
