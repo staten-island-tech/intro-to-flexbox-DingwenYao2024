@@ -178,3 +178,10 @@ function addToCart() {
 }
 
 addToCart()
+
+function filterById(id){
+  const display = document.getElementById("card")
+  display.innerHTML = "";
+  const filterProducts = products.filter((products) => products.id === id);
+}
+filterById("Food");
