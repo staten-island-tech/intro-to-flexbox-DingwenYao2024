@@ -179,9 +179,32 @@ function addToCart() {
 
 addToCart()
 
-function filterById(id){
+/* function filterById(id){
   const display = document.getElementById("card")
   display.innerHTML = "";
   const filterProducts = products.filter((products) => products.id === id);
+  filterProducts.forEach((products) =>
+    display.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card" data-name = "${products.name}" data-id = "${products.id}">
+      <img class="img" src="${products.img}" alt=""/>
+      <h2 class="name">${products.name}</h2>
+      <h2 class="price">$${products.price}</h2>
+      <button class="button">Buy Product</button>
+    </div>`))
 }
-filterById("Food");
+filterById("Food"); */
+
+function filterById(id){
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const cardCatagory = card.getAttribute("data-id");
+    if (id === cardCatagory){
+      card.style.display = "";
+    }else{
+      card.style.display = "none";
+    }
+  });
+}
+
+filterById("food");
