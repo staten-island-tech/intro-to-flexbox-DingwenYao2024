@@ -178,13 +178,12 @@ function addToCart() {
   );
 }
 
-addToCart();
 
 function filterById(id) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
-    const cardCatagory = card.getAttribute("data-id");
-    if (id === cardCatagory) {
+    const cardCategory = card.getAttribute("data-id");
+    if (cardCategory === id || id === "All") {
       card.style.display = "";
     } else {
       card.style.display = "none";
@@ -192,24 +191,19 @@ function filterById(id) {
   });
 }
 
-filterById("food");
 
-function setUpFilter() {
-  const buttons = document.querySelectorAll("filter-button");
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      const cardCatagory = card.getAttribute("data-id");
-      if (id === cardCatagory) {
-        card.style.display = "";
-      } else {
-        card.style.display = "none";
-      }
-    })
-  );
+function filterButton() {
+  document.querySelectorAll("filter-button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.id;
+      filterById(id);
+    });
+  });
 }
+addToCart();
+filterButton();
+filterById("All");
 
-setUpFilter("food");
 /* const cart = [];
 function createCartObject(product){
   const cartProduct = {...product, quantity: 1 };
