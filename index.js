@@ -193,9 +193,9 @@ function filterById(id) {
 
 
 function filterButton() {
-  document.querySelectorAll("filter-button").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const id = btn.dataset.id;
+  document.querySelectorAll("filter-button").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const id = event.target.getAttribute("data-id");
       filterById(id);
     });
   });
