@@ -162,22 +162,21 @@ products.forEach((product) => inject(product));
 
 function addToCart() {
   const buttons = document.querySelectorAll("button");
-  const btnArray = Array.from(buttons);
   const cart = [];
-  btnArray.forEach((btn) =>
-    btn.addEventListener("click", function (event) {
-      products.forEach((products) => {
-        if (
-          products.name ==
-          event.target.closest(".card").getAttribute("data-name")
-        )
-          cart.push(products);
-      });
-      console.log(cart);
-    })
-  );
-}
 
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", function (event) {
+      const card = event.target.closest(".card");
+      const name = card.getAttribute("data-name");
+
+      const product = products.find((p) => p.name === name);
+      if (product) {
+        cart.push(product);
+        console.log(cart);
+      }
+    });
+  });
+}
 
 function filterById(id) {
   const cards = document.querySelectorAll(".card");
@@ -191,19 +190,18 @@ function filterById(id) {
   });
 }
 
-
 function filterButton() {
-  document.querySelectorAll("filter-button").forEach((button) => {
+  document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", (event) => {
       const id = event.target.getAttribute("data-id");
       filterById(id);
     });
   });
 }
+
 addToCart();
 filterButton();
 filterById("All");
-
 /* const cart = [];
 function createCartObject(product){
   const cartProduct = {...product, quantity: 1 };

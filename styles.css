@@ -52,6 +52,10 @@ html {
   padding-bottom: 10px;
 }
 
+.filter-button {
+  width: 24%;
+}
+
 button {
   background-color: rgb(178, 231, 255);
   border-radius: 20px;
